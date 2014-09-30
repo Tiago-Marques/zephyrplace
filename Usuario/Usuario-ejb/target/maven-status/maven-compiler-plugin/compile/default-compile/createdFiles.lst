@@ -1,9 +1,0 @@
-br/com/zephyrplace/service/impl/UsuarioServiceImpl.class
-br/com/zephyrplace/facade/UsuarioFacade.class
-br/com/zephyrplace/persistence/producer/EntityManagerProducer.class
-br/com/zephyrplace/dao/UsuarioDAO.class
-br/com/zephyrplace/dao/GrupoDAO.class
-br/com/zephyrplace/hibernate/Grupo.class
-br/com/zephyrplace/service/UsuarioService.class
-br/com/zephyrplace/facade/impl/UsuarioFacadeImpl.class
-br/com/zephyrplace/hibernate/Usuario.class

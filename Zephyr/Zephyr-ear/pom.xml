@@ -87,8 +87,8 @@
                 		</goals>
                 		<configuration>
                 			<hostname>localhost</hostname>
-                			<username>tmarques</username>
-                			<password>1qazXSW@</password>
+                			<username>admin</username>
+                			<password>Zephyr!123</password>
                 			<filename>${project.build.finalName}.${project.packaging}</filename>
                 		</configuration>
                 	</execution>

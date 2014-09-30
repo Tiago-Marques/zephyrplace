@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jboss-web>
-	<security-domain>zephyrplace-security-domain</security-domain>
-	<default-encoding>UTF-8</default-encoding>
-	<disable-audit>true</disable-audit>
-
-</jboss-web>
