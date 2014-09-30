@@ -13,6 +13,13 @@
 
 	<dependencies>
 
+		<!-- Autenticador -->
+		<dependency>
+			<groupId>br.com.zephyrplace.Autenticador-war</groupId>
+			<artifactId>Autenticador-war</artifactId>
+			<version>1.0</version>
+			<type>war</type>
+		</dependency>
 
 		<!-- Usuario -->
 		<dependency>
@@ -21,15 +28,7 @@
 			<version>1.0</version>
 			<type>ejb</type>
 			<scope>provided</scope>
-		</dependency>
-		
-		<!-- Autenticador -->
-		<dependency>
-			<groupId>br.com.zephyrplace.Autenticador-war</groupId>
-			<artifactId>Autenticador-war</artifactId>
-			<version>1.0</version>
-			<type>war</type>
-		</dependency>
+		</dependency>		
 
 
 		<!-- JavaEE 7 -->

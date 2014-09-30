@@ -13,6 +13,8 @@
 
 	<dependencies>
 
+		
+
 		<!-- JavaEE 7 -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -26,7 +28,7 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
@@ -39,7 +41,7 @@
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>5.0</version>
-		</dependency>		
+		</dependency>
 	</dependencies>
 
 	<build>

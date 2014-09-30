@@ -15,9 +15,6 @@ public class PerfilServiceImpl implements PerfilService{
 	@Inject
 	private PerfilDAO perfilDAO;	
 
-	public String helloWorld() {
-		return "Bem vindo a Aplicativos";
-	}
 	@Override
 	public Perfil consultarPerfil(Perfil perfil) throws Exception {
 		return perfilDAO.findOne(perfil.getId());

@@ -3,11 +3,16 @@ package br.com.zephyrplace.bean;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.com.zephyrplace.facade.PerfilFacade;
 import br.com.zephyrplace.hibernate.Perfil;
 
+
+@Named("perfilBean")
+@RequestScoped
 public class PerfilBeanImpl {
 
 

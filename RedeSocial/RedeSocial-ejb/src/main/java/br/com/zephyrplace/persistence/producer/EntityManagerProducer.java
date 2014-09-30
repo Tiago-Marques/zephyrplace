@@ -11,7 +11,7 @@ import javax.persistence.PersistenceUnit;
 @Singleton
 public class EntityManagerProducer {
 
-	@PersistenceUnit(unitName = "Perfil-ejb")
+	@PersistenceUnit(unitName = "RedeSocial-ejb")
 	private EntityManagerFactory emf;
 	
 	@Default
