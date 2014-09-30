@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Zephyrplace</title>
+	<!-- Bootstrap -->
+	<link href="#{request.contextPath}/css/bootstrap.min.css" rel="stylesheet"></link>
+	<link href="#{request.contextPath}/css/footer.css" rel="stylesheet"></link>
+	<link href="#{request.contextPath}/css/custom.css" rel="stylesheet"></link>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</h:head>
+
+<h:body style="margin: 0; padding: 0;">
+
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+		</button>
+				<img class="navbar-brand" src="#{request.contextPath}/img/logoZP_top.png"
+							alt="Logo Zephyr Place" />
+				<a class="navbar-brand" href="#">Zephyrplace</a>
+			</div>
+			<div class="navbar-collapse collapse">
+			
+			<ui:insert name="menu">
+			</ui:insert>	
+				<h:form>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<p:inputText placeholder="Pesquisar" size="60" rendered="#{!empty request.getUserPrincipal().getName()}"></p:inputText><p:commandButton value="" image="ui-icon-" rendered="#{!empty request.getUserPrincipal().getName()}"></p:commandButton>
+			</li>
+			<li>	
+				<center>
+					<p:outputLabel style="margin-top:15px;margin-left:10px;" size="15" id="userLogado" value="#{request.getUserPrincipal().getName()}" rendered="#{!empty request.getUserPrincipal().getName()}"></p:outputLabel>
+				</center>
+			</li>
+			<li>
+				<center>
+					<p:commandButton style="margin-top:10px;margin-left:10px;" icon="ui-icon-close" ajax="false" value="Sair" action="#{sessionBean.efetuarLogout}" rendered="#{!empty request.getUserPrincipal().getName()}"></p:commandButton>
+				</center>
+			</li>
+		</ul>
+	</h:form>			
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	
+	
+	<div id="page">
+		<br /> <br /> <br />
+		<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+	</div>
+
+	<div id="page">
+		
+		<div id="container">
+			<ui:insert name="container">
+				<!-- Conteudo container -->
+			</ui:insert>
+			<div id="push"></div>
+		</div>
+		<br />
+		<div id="rodapeFix" style="height:40px;width:100%;"></div>
+		<div id="footer" style="margin-bottom:15px;">
+			<!-- Static navbar -->
+			<div class="navbar navbar-default navbar-static-top"
+				role="navigation">
+				<div class="container">					
+						<ui:insert name="footer">
+							<!-- Conteudo rodape -->
+						</ui:insert>
+						<div style="float: right;">
+						<center>
+						<label>Desenvolvido por Zephyr Place.</label>						
+						<img src="#{request.contextPath}/img/logoZP_rodape.png"
+							alt="Logo Zephyr Place"/>
+						</center>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="#{request.contextPath}/js/bootstrap.min.js"></script>
+	
+</h:body>
+</html>

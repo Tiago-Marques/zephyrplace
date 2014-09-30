@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="/template/template.xhtml">
+<ui:define name="menu">
+	<form method="post" action="j_security_check">
+		<p:menubar>
+			<f:facet name="options">
+				<center>
+				<input style="margin-left: 5px; margin-top: 10px;" type="text"
+					placeholder="Usuário" name="j_username" />
+				<input style="margin-left: 5px; margin-top: 10px;" type="password"
+					placeholder="Senha" name="j_password" />
+				<br />
+				<a href="#">Esqueceu sua senha?</a>
+				<input style="margin-left: 5px; margin-top: 10px;" type="submit"
+					value="Entrar" />
+					</center>
+			</f:facet>
+		</p:menubar>
+	</form>
+</ui:define>
+
+	<ui:define name="container">
+		<div class="container">
+			<br /> <br /> <br />
+			<div class="row">
+				<div class="col-md-6">
+					<center>
+					<img src="#{request.contextPath}/img/zephyrLogo_200.png"
+						height="200px" alt="logo"></img>
+					
+						<h1>Bem vindo a Zephyrplace</h1>
+						<p>Tudo o que você precisa em qualquer lugar</p>
+					</center>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+				<center>
+					<br />
+					<h2>Inscreva-se</h2>
+
+					<h:form id="userForm">
+						<p:inputText size="20" id="user"
+							value="#{usuarioBean.usuario.usuario}" placeholder="Login" />
+						<br />
+						<p:inputText size="20" style="margin-top:10px;" id="senha"
+							type="password" value="#{usuarioBean.usuario.senha}"
+							placeholder="Senha" />
+						<br />
+						
+						<p:commandButton style="margin-top:10px;margin-left:10px;" id="i"
+							value="Continuar" action="#{usuarioBean.inserir()}" ajax="false" />
+					</h:form>
+				</center>
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<br />
+		<center>
+			<a href="http://www.domain.com/green-certified/netcard.me"
+				onClick="MyWindow=window.open('http://www.domain.com/green-certified/netcard.me','greenCertified','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=550,height=700,left=50,top=50'); return false;">
+				<img src="http://www.domain.com/green-certified/hosting-badge-5.png"
+				border="0" />
+			</a>
+		</center>
+	</ui:define>
+
+	<ui:define name="footer">
+		<!-- <img src="#{request.contextPath}/img/fundo.jpg" class="img-responsive center-block"/> -->
+	</ui:define>
+
+</ui:composition>
+</html>

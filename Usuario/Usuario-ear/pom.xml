@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.zephyrplace.Usuario</groupId>
+		<artifactId>Usuario</artifactId>
+		<version>1.0</version>
+	</parent>
+	<groupId>br.com.zephyrplace.Usuario-ear</groupId>
+	<artifactId>Usuario-ear</artifactId>
+	<packaging>ear</packaging>
+	<dependencies>
+
+		<!-- Usuario -->
+		<dependency>
+			<groupId>br.com.zephyrplace.Usuario-ejb</groupId>
+			<artifactId>Usuario-ejb</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>br.com.zephyrplace.Usuario-war</groupId>
+			<artifactId>Usuario-war</artifactId>
+			<version>1.0</version>
+			<type>war</type>
+		</dependency>
+		
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<modules>
+						<webModule>
+							<groupId>br.com.zephyrplace.Usuario-war</groupId>
+							<artifactId>Usuario-war</artifactId>
+							<contextRoot>/Usuario</contextRoot>
+						</webModule>
+						<ejbModule>
+							<groupId>br.com.zephyrplace.Usuario-ejb</groupId>
+							<artifactId>Usuario-ejb</artifactId>			
+						</ejbModule>
+					</modules>
+					<generateApplicationXml>true</generateApplicationXml>
+					<version>6</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+				</configuration>
+			</plugin>
+			<!-- 
+			<plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.1.Final</version>
+                <executions>
+                	<execution>
+                		<id>undeploy-application</id>
+                		<phase>clean</phase>
+                		<goals>
+                			<goal>undeploy</goal>
+                		</goals>
+                		<configuration>
+                			<hostname>localhost</hostname>
+                			<username>admin</username>
+                			<password>1QAZxsw@</password>
+                			<filename>${project.build.finalName}.${project.packaging}</filename>
+                		</configuration>
+                	</execution>
+                	
+                	<execution>
+                		<id>deploy-application</id>
+                		<phase>install</phase>
+                		<goals>
+                			<goal>deploy</goal>
+                		</goals>
+                		<configuration>
+                			<hostname>localhost</hostname>
+                			<username>admin</username>
+                			<password>1QAZxsw@</password>
+                			<filename>${project.build.finalName}.${project.packaging}</filename>
+                		</configuration>
+                	</execution>
+                </executions>
+            </plugin>-->
+		</plugins>
+	</build>
+</project>
+

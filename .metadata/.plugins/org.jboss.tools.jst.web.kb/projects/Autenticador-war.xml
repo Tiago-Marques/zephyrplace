@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="/home/tiago/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+  <path value="/home/tiago/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
+  <path value="/home/tiago/.m2/repository/com/sun/faces/jsf-api/2.2.2/jsf-api-2.2.2.jar"/>
+  <path value="/home/tiago/.m2/repository/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
+  <path value="/home/tiago/.m2/repository/org/primefaces/primefaces/5.0/primefaces-5.0.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.0.jar/META-INF/faces-config.xml" project="Usuario-war"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.0.jar/META-INF/primefaces-p.taglib.xml" project="Usuario-war"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.0.jar/META-INF/primefaces-pm.taglib.xml" project="Usuario-war"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="/home/tiago/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar"/>
+  <path value="/Autenticador-war/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="Autenticador-war"/>
+    </library>
+   </libraries>
+  </path>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core">
+   <linked-resource declaration="true" name="%1;" path="%0"/>
+  </core>
+  <el>
+   <linked-el length="48" name="%2" offset="2474" path="%3"/>
+   <linked-el length="51" name="%2" offset="2414" path="%3"/>
+   <linked-el length="48" name="%2" offset="2038" path="%3"/>
+   <linked-el length="40" name="%2" offset="676" path="%3"/>
+   <linked-el length="55" name="%2" offset="3704" path="%3"/>
+   <linked-el length="48" name="%2" offset="2175" path="%3"/>
+   <linked-el length="49" name="%2" offset="1615" path="%3"/>
+   <linked-el length="40" name="%2" offset="599" path="%3"/>
+   <linked-el length="49" name="%2" offset="513" path="%3"/>
+   <linked-el length="44" name="%2" offset="4109" path="%3"/>
+   <linked-el length="48" name="%2" offset="2784" path="%3"/>
+   <linked-el length="40" name="%0" offset="2735" path="%3"/>
+   <linked-el length="40" name="%4" offset="676" path="%3"/>
+   <linked-el length="55" name="%4" offset="3704" path="%3"/>
+   <linked-el length="49" name="%4" offset="1615" path="%3"/>
+   <linked-el length="40" name="%4" offset="599" path="%3"/>
+   <linked-el length="49" name="%4" offset="513" path="%3"/>
+   <linked-el length="44" name="%4" offset="4109" path="%3"/>
+   <linked-el length="40" name="%1" offset="2735" path="%3"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="request" value="%2"/>
+  <alias
+   path="/Autenticador-war/src/main/java/br/com/zephyrplace/bean/SessionBeanImpl.java" value="%0"/>
+  <alias
+   path="/Autenticador-war/src/main/webapp/template/template.xhtml" value="%3"/>
+  <alias path="request.contextPath" value="%4"/>
+  <alias path="sessionBean" value="%1"/>
+  <alias path="%0" value="/Autenticador-war/src/main/java/br/com/zephyrplace/bean/SessionBeanImpl.java"/>
+  <alias path="%4" value="request.contextPath"/>
+  <alias path="%3" value="/Autenticador-war/src/main/webapp/template/template.xhtml"/>
+  <alias path="%2" value="request"/>
+  <alias path="%1" value="sessionBean"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+  <uri value="http://primefaces.org/ui">
+   <prefix>p</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+ </uris>
+</kb-project>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+		<distributable/> 
+	<display-name>Usuario</display-name>
+	<welcome-file-list>
+		<welcome-file>/paginas/index.xhtml</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<ejb-local-ref>
+		<ejb-ref-name>ejb/usuarioFacade</ejb-ref-name>
+		<ejb-ref-type>Session</ejb-ref-type>
+		<local>br.com.zephyrplace.facade.UsuarioFacade</local>
+	</ejb-local-ref>
+
+	<context-param>
+	    <param-name>facelets.SKIP_COMMENTS</param-name>
+	    <param-value>true</param-value>
+	</context-param>
+	
+<!-- 
+	<error-page>
+		 Missing login 
+		<error-code>401</error-code>
+		<location>/pages/error/401-error.html</location>
+	</error-page>
+	<error-page>
+		 Forbidden directory listing 
+		<error-code>403</error-code>
+		<location>/pages/error/403-error.html</location>
+	</error-page>
+	<error-page>
+		 Uncaught exception 
+		<error-code>500</error-code>
+		<location>/pages/error/500-error.html</location>
+	</error-page>
+	<error-page>
+		 Unsupported servlet method 
+		<error-code>503</error-code>
+		<location>/pages/error/503-error.html</location>
+	</error-page>
+	<error-page>
+		 Not found 
+		<error-code>404</error-code>
+		<location>/pages/error/403-error.html</location>
+	</error-page>
+	 -->
+	   <!-- Login Prompt -->
+  	<login-config>    	   
+       <auth-method>FORM</auth-method>
+       <realm-name>zephyrplace-security-domain</realm-name>
+       <form-login-config>  
+            <form-login-page>/login/login.xhtml</form-login-page>  
+            <form-error-page>/login/login-error.xhtml</form-error-page>  
+       </form-login-config>  
+  	</login-config>
+ 
+ 
+	 <!-- Protected Areas -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Only admins</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ADMIN</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Users and admins</web-resource-name>
+            <url-pattern>/paginas/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ADMIN</role-name>
+            <role-name>USUARIO</role-name>
+        </auth-constraint>
+    </security-constraint>
+ 
+    <!-- Allowed Roles -->
+    <security-role>
+        <role-name>ADMIN</role-name>
+    </security-role>
+    <security-role>
+        <role-name>USUARIO</role-name>
+    </security-role>
+     
+    
+
+
+
+</web-app>

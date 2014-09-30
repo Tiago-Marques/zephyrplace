@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.zephyrplace.Plataforma</groupId>
+		<artifactId>Plataforma</artifactId>
+		<version>1.0</version>
+	</parent>
+	<groupId>br.com.zephyrplace.Plataforma-ear</groupId>
+	<artifactId>Plataforma-ear</artifactId>
+	<packaging>ear</packaging>
+	<dependencies>
+
+		<!-- Plataforma -->
+		<dependency>
+			<groupId>br.com.zephyrplace.Plataforma-war</groupId>
+			<artifactId>Plataforma-war</artifactId>
+			<version>1.0</version>
+			<type>war</type>
+		</dependency>
+
+		<!-- Loja Online -->
+		<dependency>
+			<groupId>br.com.zephyrplace.LojaOnline-ejb</groupId>
+			<artifactId>LojaOnline-ejb</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+
+		<!-- Rede Social -->
+		<dependency>
+			<groupId>br.com.zephyrplace.RedeSocial-ejb</groupId>
+			<artifactId>RedeSocial-ejb</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>br.com.zephyrplace.RedeSocial-grid</groupId>
+			<artifactId>RedeSocial-grid</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+
+		<!-- Usuario -->
+		<dependency>
+			<groupId>br.com.zephyrplace.Usuario-ejb</groupId>
+			<artifactId>Usuario-ejb</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+
+
+		<!-- ServidorAplicativo -->
+		<dependency>
+			<groupId>br.com.zephyrplace.ServidorAplicativo-ejb</groupId>
+			<artifactId>ServidorAplicativo-ejb</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>br.com.zephyrplace.ServidorAplicativo-grid</groupId>
+			<artifactId>ServidorAplicativo-grid</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<modules>
+						<webModule>
+							<groupId>br.com.zephyrplace.Plataforma-war</groupId>
+							<artifactId>Plataforma-war</artifactId>
+							<contextRoot>/Plataforma</contextRoot>
+						</webModule>
+					</modules>
+					<generateApplicationXml>true</generateApplicationXml>
+					<version>6</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+

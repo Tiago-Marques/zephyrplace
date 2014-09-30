@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <display-name>Plataforma-ear</display-name>
+  <module>
+    <web>
+      <web-uri>Plataforma-war-1.0.war</web-uri>
+      <context-root>/Plataforma</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>LojaOnline-ejb-1.0.jar</ejb>
+  </module>
+  <module>
+    <ejb>RedeSocial-ejb-1.0.jar</ejb>
+  </module>
+  <module>
+    <ejb>RedeSocial-grid-1.0.jar</ejb>
+  </module>
+  <module>
+    <ejb>Usuario-ejb-1.0.jar</ejb>
+  </module>
+  <module>
+    <ejb>ServidorAplicativo-ejb-1.0.jar</ejb>
+  </module>
+  <module>
+    <ejb>ServidorAplicativo-grid-1.0.jar</ejb>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

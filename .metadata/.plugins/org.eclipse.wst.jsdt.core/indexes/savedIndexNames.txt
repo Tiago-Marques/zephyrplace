@@ -1,0 +1,13 @@
+INDEX VERSION 1.3+/opt/Zephyrplace TCC/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3198688200.index
+1313522285.index
+4152603142.index
+771217256.index
+3623768088.index
+2257568831.index
+2215697922.index
+2101325036.index
+3660789196.index
+455224759.index
+1805332290.index
+3275143285.index
