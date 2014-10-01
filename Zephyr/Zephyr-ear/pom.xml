@@ -43,6 +43,7 @@
 			<version>1.0</version>
 			<type>war</type>
 		</dependency>
+		 
 		
 
 	</dependencies>
@@ -62,10 +63,19 @@
 							<groupId>br.com.zephyrplace.JogoWeb-war</groupId>
 							<artifactId>JogoWeb-war</artifactId>
 							<contextRoot>/JogoWeb</contextRoot>
+						</webModule> 
+						<webModule>
+							<groupId>br.com.zephyrplace.RedeSocial-war</groupId>
+							<artifactId>RedeSocial-war</artifactId>
+							<contextRoot>/RedeSocial</contextRoot>
 						</webModule>
 						<ejbModule>
 							<groupId>br.com.zephyrplace.Usuario-ejb</groupId>
 							<artifactId>Usuario-ejb</artifactId>			
+						</ejbModule>
+						<ejbModule>
+							<groupId>br.com.zephyrplace.RedeSocial-ejb</groupId>
+							<artifactId>RedeSocial-ejb</artifactId>			
 						</ejbModule>
 					</modules>
 					<generateApplicationXml>true</generateApplicationXml>

@@ -20,7 +20,7 @@
 	<ui:define name="container">
 
 		<center>
-
+	<h:form>
 
 			<p:inputText size="20" style="margin-top:10px;" id="nome"
 			 	value="#{perfilBean.perfil.nome}" placeholder="Nome" />
@@ -32,7 +32,7 @@
 			
 			<p:commandButton style="margin-top:10px;margin-left:10px;" id="i"
 							value="Continuar" action="#{perfilBean.inserir()}" ajax="false" />
-
+	</h:form>
 		</center>
 
 	</ui:define>

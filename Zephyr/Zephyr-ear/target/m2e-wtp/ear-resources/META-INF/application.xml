@@ -14,16 +14,16 @@
     </web>
   </module>
   <module>
+    <web>
+      <web-uri>RedeSocial-war-1.0.war</web-uri>
+      <context-root>/RedeSocial</context-root>
+    </web>
+  </module>
+  <module>
     <ejb>Usuario-ejb-1.0.jar</ejb>
   </module>
   <module>
     <ejb>RedeSocial-ejb-1.0.jar</ejb>
-  </module>
-  <module>
-    <web>
-      <web-uri>RedeSocial-war-1.0.war</web-uri>
-      <context-root>/RedeSocial-war</context-root>
-    </web>
   </module>
   <library-directory>lib</library-directory>
 </application>

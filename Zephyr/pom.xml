@@ -9,8 +9,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>../Usuario</module>
 		<module>../Autenticador</module>
+		<module>../Usuario</module>
 		<module>../JogoWeb</module>
 		<module>../RedeSocial</module>
 		<module>Zephyr-ear</module>

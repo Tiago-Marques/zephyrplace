@@ -3,7 +3,13 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-		<distributable/> 
+	<distributable/>
+	<session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
 	<display-name>RedeSocial</display-name>
 	<welcome-file-list>
 		<welcome-file>/paginas/index.xhtml</welcome-file>
@@ -25,7 +31,7 @@
 	</ejb-local-ref>
 
 	<context-param>
-	    <param-name>facelets.SKIP_COMMENTS</param-name>
+	    <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
 	    <param-value>true</param-value>
 	</context-param>
 	

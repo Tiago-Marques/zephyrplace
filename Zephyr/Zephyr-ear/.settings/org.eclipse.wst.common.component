@@ -8,7 +8,13 @@
         <dependent-module archiveName="JogoWeb-war-1.0.war" deploy-path="/" handle="module:/resource/JogoWeb-war/JogoWeb-war">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="RedeSocial-war-1.0.war" deploy-path="/" handle="module:/resource/RedeSocial-war/RedeSocial-war">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="Usuario-ejb-1.0.jar" deploy-path="/" handle="module:/resource/Usuario-ejb/Usuario-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="RedeSocial-ejb-1.0.jar" deploy-path="/" handle="module:/resource/RedeSocial-ejb/RedeSocial-ejb">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="junit-dep-4.8.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/junit/junit-dep/4.8.2/junit-dep-4.8.2.jar">
@@ -57,12 +63,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="jcl-over-slf4j-1.7.7.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/slf4j/jcl-over-slf4j/1.7.7/jcl-over-slf4j-1.7.7.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="RedeSocial-ejb-1.0.jar" deploy-path="/" handle="module:/resource/RedeSocial-ejb/RedeSocial-ejb">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="RedeSocial-war-1.0.war" deploy-path="/" handle="module:/resource/RedeSocial-war/RedeSocial-war">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
