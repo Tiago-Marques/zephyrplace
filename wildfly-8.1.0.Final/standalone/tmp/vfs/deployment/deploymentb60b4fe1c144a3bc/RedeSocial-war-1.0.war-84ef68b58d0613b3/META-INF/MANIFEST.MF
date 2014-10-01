@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: tmarques
+Class-Path: primefaces-5.0.jar
+Created-By: Apache Maven 3.2.1
+Build-Jdk: 1.8.0_20
+

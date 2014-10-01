@@ -4,11 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
 	<distributable/>
-	<session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config> 
+
 	<display-name>JogoWeb</display-name>
 	<welcome-file-list>
 		<welcome-file>/paginas/index.xhtml</welcome-file>
@@ -55,7 +51,7 @@
 		<location>/pages/error/403-error.html</location>
 	</error-page>
 	 -->
-	   <!-- Login Prompt -->
+	 <!-- Login Prompt -->
   	<login-config>    	   
        <auth-method>FORM</auth-method>
        <realm-name>zephyrplace-security-domain</realm-name>
@@ -65,6 +61,13 @@
        </form-login-config>  
   	</login-config>
  
+   <!-- Allowed Roles -->
+    <security-role>
+        <role-name>ADMIN</role-name>
+    </security-role>
+    <security-role>
+        <role-name>USUARIO</role-name>
+    </security-role>
  
 	 <!-- Protected Areas -->
     <security-constraint>
@@ -87,13 +90,7 @@
         </auth-constraint>
     </security-constraint>
  
-    <!-- Allowed Roles -->
-    <security-role>
-        <role-name>ADMIN</role-name>
-    </security-role>
-    <security-role>
-        <role-name>USUARIO</role-name>
-    </security-role>
+  
      
     
 

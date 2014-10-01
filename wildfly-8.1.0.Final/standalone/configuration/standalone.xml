@@ -138,17 +138,27 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:datasources:2.0">
             <datasources>
-                <datasource jta="false" jndi-name="java:jboss/datasources/zephyrplace-ds" pool-name="zephyrplace-ds" enabled="true" use-java-context="true" use-ccm="false">
+                <datasource jta="true" jndi-name="java:jboss/datasources/zephyrplace-ds" pool-name="zephyrplace-ds" enabled="true" use-java-context="true">
                     <connection-url>jdbc:postgresql://localhost:5432/postgres</connection-url>
                     <driver>postgresql</driver>
+                    <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+                    <pool>
+                        <min-pool-size>10</min-pool-size>
+                        <max-pool-size>100</max-pool-size>
+                        <prefill>true</prefill>
+                    </pool>
                     <security>
                         <user-name>postgres</user-name>
                         <password>Zephyr!123</password>
                     </security>
+                    <statement>
+                        <prepared-statement-cache-size>32</prepared-statement-cache-size>
+                        <share-prepared-statements>true</share-prepared-statements>
+                        </statement>
                 </datasource>
                 <drivers>
                     <driver name="postgresql" module="org.postgresql">
-                        <xa-datasource-class>org.postgresql.Driver</xa-datasource-class>
+                        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
                     </driver>
                 </drivers>
             </datasources>
@@ -205,7 +215,7 @@
                     <keepalive-time time="100" unit="milliseconds"/>
                 </thread-pool>
             </thread-pools>
-            <default-security-domain value="other"/>
+            <default-security-domain value="zephyrplace-security-domain"/>
             <default-missing-method-permissions-deny-access value="true"/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:io:1.1">
@@ -342,6 +352,7 @@
                     <location name="/" handler="welcome-content"/>
                     <filter-ref name="server-header"/>
                     <filter-ref name="x-powered-by-header"/>
+                    <single-sign-on path="/"/>
                 </host>
             </server>
             <servlet-container name="default">
@@ -395,7 +406,7 @@
 
     <deployments>
         <deployment name="Zephyr-ear-1.0.ear" runtime-name="Zephyr-ear-1.0.ear">
-            <content sha1="f09fa45ac8dca893e22d0e261f7cd449ab180448"/>
+            <content sha1="bd152df418e28564105f52a5013de814ce7a4931"/>
         </deployment>
     </deployments>
 </server>

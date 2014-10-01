@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
 	<security-domain>zephyrplace-security-domain</security-domain>
+	<disable-audit>true</disable-audit>
 	<default-encoding>UTF-8</default-encoding>
 	<context-root>/Usuario</context-root>
 	<replication-config>
